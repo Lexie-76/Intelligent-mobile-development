@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GetWebPageSourceCode</string>
+    <string name="enter_url_text">Enter URL:</string>
+    <string name="hint_text">www.example.com</string>
+    <string name="get_page_source_text">GET PAGE SOURCE</string>
+    <string name="page_appear_initial">Page source will appear here</string>
+    <string name="httpInitial">http://</string>
+    <string name="loading">Loading...</string>
+    <string name="no_search_term">Please enter a search term</string>
+    <string name="no_network">Please check your network connection and try again.</string>
+</resources>
