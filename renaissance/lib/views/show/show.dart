@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:renaissance/views/show/Cpns/occur_ani.dart';
 import 'package:renaissance/views/show/Cpns/swiper_item.dart';
 import 'package:renaissance/views/show/artist.dart';
 import 'package:renaissance/views/show/history.dart';
@@ -20,8 +21,9 @@ class Show extends StatelessWidget {
           children: [
             buildStyle1(),
             SizedBox(height:20),
-            Text("———————— 文艺复兴 ————————",style: TextStyle(color: Colors.grey, fontFamily: "ZhiMangXing", fontSize: 20),),
-            SizedBox(height:80),
+            TabPage3(),
+            // Text("———————— 文艺复兴 ————————",style: TextStyle(color: Colors.grey, fontFamily: "ZhiMangXing", fontSize: 20),),
+            SizedBox(height:50),
             Card(context)
           ],
         )
@@ -50,6 +52,12 @@ class Show extends StatelessWidget {
           activeColor: Colors.white),
     );
   }
+  
+  List ImageList=[
+        "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg3.artimg.net%2F201909%2Fm8VuaJxYHgWsblapN3V98famdW3cKQtRlbdTYBzX.jpg&refer=http%3A%2F%2Fimg3.artimg.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1627361256&t=29ca3a876ae83f4de1faa1a8fd10369a",
+        "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.86mlzg.com%2FupFiles%2FinfoImg%2F201905%2F201905241429167342.jpg&refer=http%3A%2F%2Fwww.86mlzg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1627361403&t=79ab4a6882ca551a4007b4ded3601463"
+      ];
+
 
   Widget buildStyle1() {
     return Container(
@@ -60,12 +68,12 @@ class Show extends StatelessWidget {
         // 布局构建
         itemBuilder: (BuildContext context, int index) {
           return new Image.network(
-            "http://hbimg.b0.upaiyun.com/a3e592c653ea46adfe1809e35cd7bc58508a6cb94307-aaO54C_fw658",
+            ImageList[index],
             fit: BoxFit.fill,
           );
         },
         //条目个数
-        itemCount: 6,
+        itemCount: 2,
         // 自动翻页
         autoplay: true,
         // 分页指示
@@ -99,7 +107,7 @@ class Show extends StatelessWidget {
                         builder: (context)=>History())
                 );
               },
-              child:cardItem("历","史","轴", "思想解放运动和人文主义"),
+              child:cardItem("历","史","轴", "思想解放运动和人文主义","card1"),
             ),
             MaterialButton(
               onPressed: () {
@@ -108,7 +116,7 @@ class Show extends StatelessWidget {
                         builder: (context)=>Museum())
                 );
               },
-              child: cardItem("博","物","馆", "文艺复兴时期的艺术成就"),
+              child: cardItem("博","物","馆", "文艺复兴时期的艺术成就","card2"),
             ),
             MaterialButton(
               onPressed: () {
@@ -117,7 +125,7 @@ class Show extends StatelessWidget {
                         builder: (context)=>Artist())
                 );
               },
-              child: cardItem("名","人","堂", "代表人物与杰出的艺术家"),
+              child: cardItem("名","人","堂", "代表人物与杰出的艺术家","card3"),
             ),
             MaterialButton(
               onPressed: () {
@@ -126,21 +134,22 @@ class Show extends StatelessWidget {
                         builder: (context)=>Story())
                 );
               },
-              child: cardItem("故","事","会", "文艺复兴背后的神秘家族"),
+              child: cardItem("故","事","会", "文艺复兴背后的神秘家族","card4"),
             ),
           ],
         )
     );
   }
-  Widget cardItem(String letter1, String letter2, String letter3, String intro){
+  Widget cardItem(String letter1, String letter2, String letter3, String intro,String pic){
+
     return Container(
       padding: EdgeInsets.fromLTRB(10, 50, 10, 5),
       decoration: BoxDecoration(
         image:DecorationImage(
-          image: AssetImage("assets/images/show_page/borderright.png"),
-          fit: BoxFit.fitHeight
+          image: AssetImage("assets/images/show_page/${pic}.png"),
+          fit: BoxFit.cover
         ),
-        color: Color(0xEE404040),
+        color: Color(0xFFFFFFFF),
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: Column(
@@ -160,9 +169,9 @@ class Show extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(letter1,style: TextStyle(color:Colors.white,fontSize: 50,fontFamily: "ZhiMangXing"),),
-          Text(letter2,style: TextStyle(color:Colors.white,fontSize: 50,fontFamily: "ZhiMangXing"),),
-          Text(letter3,style: TextStyle(color:Colors.white,fontSize: 50,fontFamily: "ZhiMangXing"),)
+          Text(letter1,style: TextStyle(color:Colors.black,fontSize: 50,fontFamily: "ZhiMangXing"),),
+          Text(letter2,style: TextStyle(color:Colors.black,fontSize: 50,fontFamily: "ZhiMangXing"),),
+          Text(letter3,style: TextStyle(color:Colors.black,fontSize: 50,fontFamily: "ZhiMangXing"),)
         ],
       ),
     );

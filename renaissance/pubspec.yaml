@@ -30,8 +30,11 @@ dependencies:
 
   flutter_swiper: ^1.1.6
 
-#  cloudbase_core: ^0.0.9
-#  cloudbase_auth: ^0.0.11
+  cloudbase_core: ^0.0.9
+  cloudbase_auth: ^0.0.11
+  cloudbase_function: ^0.0.2
+  cloudbase_storage: ^0.0.2
+  cloudbase_database: ^0.0.7
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -70,6 +73,10 @@ flutter:
     - assets/images/show_page/right.png
     - assets/images/show_page/round.png
     - assets/images/show_page/showback.png
+    - assets/images/show_page/card1.png
+    - assets/images/show_page/card2.png
+    - assets/images/show_page/card3.png
+    - assets/images/show_page/card4.png
     - assets/images/show_page/borderleft.png
     - assets/images/show_page/borderright.png
 
