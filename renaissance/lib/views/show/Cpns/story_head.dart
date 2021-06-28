@@ -31,7 +31,7 @@ class storyHead extends StatelessWidget {
                 ),
               ),
               Transform.translate(
-                offset: Offset(0, 50),
+                offset: Offset(0, 20),
                 child: ListTile(
                   // leading: CircleAvatar(
                   //   backgroundImage: NetworkImage(CONSTANT.userAvatar),
@@ -99,9 +99,9 @@ class MyClipper extends CustomClipper<Path> {
     // 二阶贝塞尔曲线画弧
     path.quadraticBezierTo(0, 0, 0, 0);
     // 连接到底部
-    path.lineTo(0, size.height / 3.75);
+    path.lineTo(0, size.height / 4);
     // 三阶贝塞尔曲线画弧
-    path.cubicTo(size.width / 12, size.height, size.width / 12 * 3, size.height / 8, size.width, size.height / 3.75);
+    path.cubicTo(size.width / 12, size.height/2, size.width / 12 * 3, size.height/200 , size.width, size.height / 4);
     // 再连接回去
     path.lineTo(size.width, 60);
     // 再用二阶贝塞尔曲线画弧

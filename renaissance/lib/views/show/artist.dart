@@ -7,7 +7,12 @@ class Artist extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("名人堂"),
+        title: Text("名人堂",
+            style: TextStyle(
+                fontSize: 40,
+                fontFamily: "ZhiMangXing",
+                color:Colors.white
+            )),
       ),
       body: Center(
         child: Container(

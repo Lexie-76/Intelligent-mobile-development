@@ -5,7 +5,12 @@ class History extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("历史轴"),
+        title: Text("历史轴",
+            style: TextStyle(
+            fontSize: 40,
+            fontFamily: "ZhiMangXing",
+            color:Colors.white
+        )),
       ),
       body: Center(
         child: Text("历史轴", style: TextStyle(fontSize: 50)),

@@ -18,7 +18,7 @@ class Story extends StatelessWidget {
             color: Colors.white,
             fontFamily: "ZhiMangXing",
             fontWeight: FontWeight.bold,
-            fontSize: 50
+            fontSize: 40
           ),
         ),
       ),
