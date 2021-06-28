@@ -29,6 +29,7 @@ dependencies:
   flutter_cupertino_date_picker: ^1.0.26+2
 
   flutter_swiper: ^1.1.6
+  animated_text_kit: ^1.3.1
 
   cloudbase_core: ^0.0.9
   cloudbase_auth: ^0.0.11
@@ -72,6 +73,7 @@ flutter:
     - assets/images/show_page/left.png
     - assets/images/show_page/right.png
     - assets/images/show_page/round.png
+    - assets/images/show_page/action.png
     - assets/images/show_page/showback.png
     - assets/images/show_page/card1.png
     - assets/images/show_page/card2.png
@@ -79,6 +81,7 @@ flutter:
     - assets/images/show_page/card4.png
     - assets/images/show_page/borderleft.png
     - assets/images/show_page/borderright.png
+    - assets/images/show_page/medici.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -17,13 +17,11 @@ class Show extends StatelessWidget {
       ),
       body: Container(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             buildStyle1(),
-            SizedBox(height:20),
             TabPage3(),
             // Text("———————— 文艺复兴 ————————",style: TextStyle(color: Colors.grey, fontFamily: "ZhiMangXing", fontSize: 20),),
-            SizedBox(height:50),
             Card(context)
           ],
         )
@@ -83,14 +81,14 @@ class Show extends StatelessWidget {
           print(" 点击 " + index.toString());
         },
         // 视窗比例
-        viewportFraction: 1,
+        viewportFraction: 0.8,
         // 布局方式
         //layout: SwiperLayout.STACK,
         // 用户进行操作时停止自动翻页
         autoplayDisableOnInteraction: true,
         // 无线轮播
         loop: true,
-        scale: 1,
+        scale: 0.9,
       ),
     );
   }

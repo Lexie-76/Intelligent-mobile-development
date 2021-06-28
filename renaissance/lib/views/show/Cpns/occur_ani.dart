@@ -22,7 +22,16 @@ class LogoFadeState extends State<TabPage3> {
       children: [
         new MaterialButton(
           child:new Container(
-            child: new Text("———————— 文艺复兴 ————————",style: TextStyle(color: Colors.grey, fontFamily: "ZhiMangXing", fontSize: 20),),
+            child:Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("———————",style: TextStyle(color: Colors.grey, fontFamily: "ZhiMangXing", fontSize: 20),),
+                Text("文艺复兴 ",style: TextStyle(color: Colors.grey, fontFamily: "ZhiMangXing", fontSize: 20),),
+                Image.asset("assets/images/show_page/action.png",width:20),
+                Text("———————",style: TextStyle(color: Colors.grey, fontFamily: "ZhiMangXing", fontSize: 20),),
+              ],
+            )
+
           ) ,
           onPressed: _changeOpacity,//添加点击事件
         ),
