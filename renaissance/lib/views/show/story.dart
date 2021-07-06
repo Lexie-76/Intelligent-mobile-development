@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'Cpns/story_List.dart';
+import 'Menu/story_menu.dart';
+import 'Pages/story_List.dart';
 import 'Cpns/story_head.dart';
 
 class Story extends StatelessWidget {
@@ -24,9 +25,12 @@ class Story extends StatelessWidget {
       ),
       body: Stack(
         children: <Widget>[
-          storyList(),
-          storyHead()
+          StoryList(),
+          StoryHead()
         ],
+      ),
+      drawer: Drawer(
+          child: StoryMenu(),
       ),
     );
   }

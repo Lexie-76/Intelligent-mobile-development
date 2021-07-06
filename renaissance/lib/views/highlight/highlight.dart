@@ -1,36 +1,39 @@
-
 import 'package:flutter/material.dart';
 
-class Highlight extends StatelessWidget {
-  var _gradientValue = 0.5;
+import 'higCpns/test.dart';
+
+class HeroAnimationRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("交流圈"),
+    return Container(
+      alignment: Alignment.topCenter,
+      child: InkWell(
+        child: Hero(
+          tag: "avatar", //唯一标记，前后两个路由页Hero的tag必须相同
+          child: ClipOval(
+            child: Image.asset("assets/images/person_page/welcome.png",
+              width: 50.0,
+            ),
+          ),
+        ),
+        onTap: () {
+          //打开B路由
+          Navigator.push(context, PageRouteBuilder(
+              pageBuilder: (BuildContext context, Animation animation,
+                  Animation secondaryAnimation) {
+                return new FadeTransition(
+                  opacity: animation,
+                  child: Scaffold(
+                    appBar: AppBar(
+                      title: Text("原图"),
+                    ),
+                    body: HeroAnimationRouteB(),
+                  ),
+                );
+              })
+          );
+        },
       ),
-      body:ShaderMask(
-            shaderCallback:(Rect bounds) {
-              return LinearGradient(
-                colors: <Color>[Colors.blueGrey, Colors.deepOrangeAccent,Colors.yellow],
-                stops: [
-                0 + _gradientValue * 0.2,
-                _gradientValue * 0.8,
-                1 - _gradientValue * 0.3
-                ]
-              ).createShader(bounds);
-              // return RadialGradient(
-              //   center: Alignment.topLeft,
-              //   radius: 1.0,
-              //   colors: <Color>[Colors.yellow, Colors.deepOrange.shade900],
-              //   tileMode: TileMode.mirror,
-              // ).createShader(bounds);
-            },
-            blendMode: BlendMode.srcATop,
-            child: Text('老孟，一枚有态度的程序员',style: TextStyle(color:Colors.white, fontSize: 30),),
-          )
-
-      );
+    );
   }
 }
-

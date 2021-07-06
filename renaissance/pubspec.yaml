@@ -42,6 +42,27 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   curved_navigation_bar: ^0.3.1
+  hidden_drawer_menu: ^1.1.4
+  path_drawing: ^0.4.0
+  flutter_staggered_animations: ^0.1.2
+  #网络请求
+  dio: ^3.0.10
+#  #持久化操作
+#  share_preferences: ^0.5.12+4
+#  #缓存清理
+#  path_provider: ^1.6.27
+#  #图片显示，可缓存
+#  ok_image: ^0.4.0
+#  #ui框架
+#  weui: ^0.0.8
+#  #推送
+#  jpush_flutter: 0.6.3
+#  #图片压缩
+#  flutter_luban: ^0.1.11
+#  #全局状态管理
+#  provider: ^4.3.2+3
+
+
 
 
 dev_dependencies:
@@ -61,14 +82,14 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/tabbar/highlight.png
-    - assets/images/tabbar/highlight_active.png
-    - assets/images/tabbar/show.png
-    - assets/images/tabbar/show_active.png
-    - assets/images/tabbar/person.png
-    - assets/images/tabbar/person_active.png
-    - assets/images/person_page/collect.png
-    - assets/images/person_page/essay.png
+#    - assets/images/tabbar/highlight.png
+#    - assets/images/tabbar/highlight_active.png
+#    - assets/images/tabbar/show.png
+#    - assets/images/tabbar/show_active.png
+#    - assets/images/tabbar/person.png
+#    - assets/images/tabbar/person_active.png
+#    - assets/images/person_page/collect.png
+#    - assets/images/person_page/essay.png
     - assets/images/person_page/like.png
     - assets/images/person_page/back.png
     - assets/images/person_page/welcome.png
@@ -84,6 +105,9 @@ flutter:
     - assets/images/show_page/borderleft.png
     - assets/images/show_page/borderright.png
     - assets/images/show_page/medici.png
+    - assets/images/show_page/tagback.png
+    - assets/images/show_page/tagback2.jpg
+    - assets/images/show_page/tagback3.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -100,6 +124,9 @@ flutter:
     - family: DancingScript
       fonts:
         - asset: assets/fonts/DancingScript-Regular.ttf
+    - family: LiShu
+      fonts:
+        - asset: assets/fonts/JiZiJingDianLiShuJianFan-Shan(GEETYPE-LiShuGBT-Flash)-2.ttf
     - family: ZhiMangXing
       fonts:
         - asset: assets/fonts/ZhiMangXing-Regular.ttf

@@ -12,8 +12,7 @@ class Tip extends StatelessWidget{
       child:Column(
         children: [
           welcome(),
-          login_button("已有账号"),
-          login_button("点此注册")
+          login_button("点此登录")
 
         ],
       )

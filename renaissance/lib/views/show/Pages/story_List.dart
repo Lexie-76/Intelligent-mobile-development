@@ -16,8 +16,8 @@ var styles = {
   ),
 };
 
-class storyList extends StatelessWidget {
-  const storyList({Key key}) : super(key: key);
+class StoryList extends StatelessWidget {
+  const StoryList({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

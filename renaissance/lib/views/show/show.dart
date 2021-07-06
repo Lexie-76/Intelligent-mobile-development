@@ -1,14 +1,13 @@
 
 import 'package:flutter/material.dart';
-import 'package:renaissance/views/show/Cpns/occur_ani.dart';
-import 'package:renaissance/views/show/Cpns/swiper_item.dart';
+import 'package:renaissance/views/show/Cpns/occur_intro.dart';
 import 'package:renaissance/views/show/artist.dart';
 import 'package:renaissance/views/show/history.dart';
 import 'package:renaissance/views/show/museum.dart';
 import 'package:renaissance/views/show/story.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
-class Show extends StatelessWidget {
+class ShowPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:renaissance/Component/constant.dart' as CONSTANT;
 
-class storyHead extends StatelessWidget {
-  const storyHead({Key key}) : super(key: key);
+class StoryHead extends StatelessWidget {
+  const StoryHead({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
