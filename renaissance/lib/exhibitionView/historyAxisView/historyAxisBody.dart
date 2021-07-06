@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:like_button/like_button.dart';
-import 'package:renaissance_new/cloudBaseLink/cloudBase.dart';
+import 'package:renaissance/cloudBaseLink/cloudBase.dart';
 import 'axisCpns/flutter_time_axis.dart';
 
 class HistoryAxisBody extends StatefulWidget{
@@ -32,7 +32,7 @@ class HistoryAxisBody extends StatefulWidget{
 
    @override
    Widget build(BuildContext context) {
-     return Scaffold(
+     return dbDocument.isEmpty?CircularProgressIndicator():Scaffold(
           appBar: AppBar(
             centerTitle: true,
             title: Text("历史轴",
@@ -86,6 +86,16 @@ class HistoryAxisBody extends StatefulWidget{
                                  padding: const EdgeInsets.only(left:20.0),
                                  child: Text(dbDocument[index]['event']),
                                ),
+                               Container(
+                                 width: 120,
+                                 height:180,
+                                 decoration: BoxDecoration(
+                                   image: DecorationImage(
+                                     image: NetworkImage(dbDocument[index]['img'])
+                                   )
+                                 ),
+                               ),
+                                   // child: Image.network(dbDocument[index]['img'])),
                              ],
                            ),
                          ),

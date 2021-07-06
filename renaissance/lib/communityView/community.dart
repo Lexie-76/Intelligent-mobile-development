@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:renaissance_new/communityView/communityBody.dart';
+import 'package:renaissance/communityView/communityBody.dart';
 
 
 
